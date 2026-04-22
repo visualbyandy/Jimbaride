@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-jimba-deep: #0B243B; /* Deep Navy from your image */
+  --color-jimba-foam: #FBFBFB; /* Parasol White */
+  --color-jimba-rock: #424242; /* Cliff Rock Grey */
+  --color-jimba-accent: #E2E2E2;
+}
+
+@layer base {
+  body {
+    @apply bg-jimba-deep text-jimba-foam antialiased font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-black tracking-tight;
+  }
+}
+
+.font-brand {
+  @apply font-display font-black tracking-tighter uppercase;
+}
+
+.glass-morphism {
+  @apply bg-jimba-foam/90 backdrop-blur-lg border border-black/5 text-jimba-deep;
+}
+
+.btn-premium {
+  @apply px-8 py-3 rounded-full border border-jimba-deep/20 bg-jimba-deep text-jimba-foam hover:bg-transparent hover:text-jimba-deep transition-all duration-300 font-medium;
+}
+
+.card-luxury {
+  @apply overflow-hidden rounded-3xl bg-jimba-foam text-jimba-deep shadow-xl shadow-black/10 transition-transform hover:scale-[1.02];
+}
+
+.service-card {
+  @apply p-8 rounded-3xl bg-jimba-foam text-jimba-deep shadow-lg shadow-black/5 hover:shadow-xl transition-all;
+}
